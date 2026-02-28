@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/Administrador/Documents/2d-project-assets -name \"*.gd\" -exec grep -l \"collision\\\\|overlap\\\\|hitbox\\\\|physics\\\\|area\\\\|body\\\\|tree\" {} ;)"
+    ]
+  }
+}

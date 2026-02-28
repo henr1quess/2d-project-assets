@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bvp0oy6d34s7n"]
+
+[ext_resource type="PackedScene" uid="uid://dn2vpasminfij" path="res://canvas_layer.tscn" id="1_5mrb7"]
+[ext_resource type="Script" uid="uid://oj7hj4kgw31t" path="res://survivor_game.gd" id="1_i54c3"]
+[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_wkcnj"]
+[ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_8id3q"]
+[ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="3_kbdm8"]
+
+[sub_resource type="Curve2D" id="Curve2D_d0dif"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -131, -126, 0, 0, 0, 0, 2134, -131, 0, 0, 0, 0, 2132, 1253, 0, 0, 0, 0, -130, 1257, 0, 0, 0, 0, -131, -126)
+}
+point_count = 5
+
+[node name="Game" type="Node2D" unique_id=848661572]
+y_sort_enabled = true
+script = ExtResource("1_i54c3")
+
+[node name="CanvasLayer" parent="." unique_id=365571379 instance=ExtResource("1_5mrb7")]
+layer = -2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=57931289]
+offset_right = 1948.0
+offset_bottom = 1115.0
+
+[node name="PineTree" parent="." unique_id=514629799 instance=ExtResource("2_8id3q")]
+position = Vector2(460, 289)
+
+[node name="PineTree2" parent="." unique_id=318070346 instance=ExtResource("2_8id3q")]
+position = Vector2(586, 749)
+
+[node name="PineTree3" parent="." unique_id=2114061705 instance=ExtResource("2_8id3q")]
+position = Vector2(1401, 185)
+
+[node name="PineTree4" parent="." unique_id=1188918689 instance=ExtResource("2_8id3q")]
+position = Vector2(1529, 257)
+
+[node name="PineTree5" parent="." unique_id=1022906772 instance=ExtResource("2_8id3q")]
+position = Vector2(1314, 737)
+
+[node name="PineTree6" parent="." unique_id=1644467477 instance=ExtResource("2_8id3q")]
+position = Vector2(1661, 539)
+
+[node name="Player" parent="." unique_id=1219295415 instance=ExtResource("1_wkcnj")]
+position = Vector2(1002, 568)
+
+[node name="Mob" parent="." unique_id=1578788416 instance=ExtResource("3_kbdm8")]
+position = Vector2(633, 430)
+
+[node name="Mob2" parent="." unique_id=2141968724 instance=ExtResource("3_kbdm8")]
+position = Vector2(1748, 926)
+
+[node name="Mob4" parent="." unique_id=1851684327 instance=ExtResource("3_kbdm8")]
+position = Vector2(1536, 96)
+
+[node name="Mob3" parent="." unique_id=161590253 instance=ExtResource("3_kbdm8")]
+position = Vector2(812, 943)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=976321487]
+curve = SubResource("Curve2D_d0dif")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1322238740]
+unique_name_in_owner = true
+position = Vector2(-110.91383, -126.044334)
+rotation = -0.002207502
+progress = 20.1
+
+[node name="Timer" type="Timer" parent="." unique_id=1174716252]
+unique_name_in_owner = true
+autostart = true
