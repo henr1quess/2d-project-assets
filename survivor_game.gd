@@ -16,3 +16,8 @@ func spawn_mob() -> void:
 	%PathFollow2D.progress_ratio = randf()
 	mob.global_position = %PathFollow2D.global_position
 	get_tree().current_scene.add_child(mob)
+
+
+func _on_player_health_depleted():
+	%GameOverScreen.visible = true
+	get_tree().paused = true

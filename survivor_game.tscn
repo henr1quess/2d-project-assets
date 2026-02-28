@@ -44,6 +44,16 @@ position = Vector2(1661, 539)
 [node name="Player" parent="." unique_id=1219295415 instance=ExtResource("1_wkcnj")]
 position = Vector2(1002, 568)
 
+[node name="Path2D" type="Path2D" parent="Player" unique_id=976321487]
+position = Vector2(-1002, -568)
+curve = SubResource("Curve2D_d0dif")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1322238740]
+unique_name_in_owner = true
+position = Vector2(-110.91383, -126.044334)
+rotation = -0.002207502
+progress = 20.1
+
 [node name="Mob" parent="." unique_id=1578788416 instance=ExtResource("3_kbdm8")]
 position = Vector2(633, 430)
 
@@ -56,15 +66,36 @@ position = Vector2(1536, 96)
 [node name="Mob3" parent="." unique_id=161590253 instance=ExtResource("3_kbdm8")]
 position = Vector2(812, 943)
 
-[node name="Path2D" type="Path2D" parent="." unique_id=976321487]
-curve = SubResource("Curve2D_d0dif")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1322238740]
-unique_name_in_owner = true
-position = Vector2(-110.91383, -126.044334)
-rotation = -0.002207502
-progress = 20.1
-
 [node name="Timer" type="Timer" parent="." unique_id=1174716252]
 unique_name_in_owner = true
 autostart = true
+
+[node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=276994801]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen" unique_id=839759696]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.50980395)
+
+[node name="Label" type="Label" parent="GameOverScreen/ColorRect" unique_id=1396218906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 137
+text = "Game Over"
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
