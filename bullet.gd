@@ -5,6 +5,7 @@ extends Area2D
 
 var direction: Vector2 = Vector2.RIGHT
 var start_position: Vector2
+var damage: int = 1
 
 func _ready() -> void:
 	direction = Vector2.RIGHT.rotated(global_rotation)
@@ -17,5 +18,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(damage)
 	queue_free()

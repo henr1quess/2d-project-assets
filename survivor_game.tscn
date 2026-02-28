@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://oj7hj4kgw31t" path="res://survivor_game.gd" id="1_i54c3"]
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_wkcnj"]
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_8id3q"]
-[ext_resource type="PackedScene" uid="uid://y38gte5o0xf8" path="res://mob.tscn" id="3_kbdm8"]
 
 [sub_resource type="Curve2D" id="Curve2D_d0dif"]
 _data = {
@@ -54,18 +53,6 @@ position = Vector2(-110.91383, -126.044334)
 rotation = -0.002207502
 progress = 20.1
 
-[node name="Mob" parent="." unique_id=1578788416 instance=ExtResource("3_kbdm8")]
-position = Vector2(633, 430)
-
-[node name="Mob2" parent="." unique_id=2141968724 instance=ExtResource("3_kbdm8")]
-position = Vector2(1748, 926)
-
-[node name="Mob4" parent="." unique_id=1851684327 instance=ExtResource("3_kbdm8")]
-position = Vector2(1536, 96)
-
-[node name="Mob3" parent="." unique_id=161590253 instance=ExtResource("3_kbdm8")]
-position = Vector2(812, 943)
-
 [node name="Timer" type="Timer" parent="." unique_id=1174716252]
 unique_name_in_owner = true
 autostart = true
@@ -83,6 +70,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.50980395)
 
 [node name="Label" type="Label" parent="GameOverScreen/ColorRect" unique_id=1396218906]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

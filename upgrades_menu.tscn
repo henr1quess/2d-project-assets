@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://upgrades_menu.gd" id="1_upgrades"]
+
+[node name="UpgradesMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upgrades")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "UPGRADES"
+horizontal_alignment = 1
+
+[node name="CoinsLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Moedas: 0"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DamageLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Dano: Nível 0"
+
+[node name="DamageButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Comprar (20 moedas)"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Vida: Nível 0"
+
+[node name="HealthButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Comprar (30 moedas)"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ReviveLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Revive: Não possui"
+
+[node name="ReviveButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Comprar (500 moedas)"
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Voltar"
+
+[connection signal="pressed" from="VBoxContainer/DamageButton" to="." method="_on_damage_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ReviveButton" to="." method="_on_revive_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

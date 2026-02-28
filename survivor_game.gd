@@ -1,6 +1,7 @@
 extends Node2D
 
 const MOB_SCENE: PackedScene = preload("res://mob.tscn")
+const GAME_OVER_SCENE: PackedScene = preload("res://game_over.tscn")
 
 @export var mobs_per_tick: int = 1
 
@@ -19,5 +20,8 @@ func spawn_mob() -> void:
 
 
 func _on_player_health_depleted():
+	# Mostra tela de Game Over com botões
+	var game_over_ui = GAME_OVER_SCENE.instantiate()
+	%GameOverScreen.add_child(game_over_ui)
 	%GameOverScreen.visible = true
 	get_tree().paused = true

@@ -57,3 +57,14 @@ rotation = 2.1062177e-05
 theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
+
+[node name="CoinHUD" type="CanvasLayer" parent="."]
+
+[node name="CoinLabel" type="Label" parent="CoinHUD"]
+unique_name_in_owner = true
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 28
+text = "Moedas: 0"

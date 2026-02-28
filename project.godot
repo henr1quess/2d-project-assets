@@ -75,9 +75,13 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="Your First 2D Game With Godot 4: START (GDQuest)"
-run/main_scene="uid://bvp0oy6d34s7n"
+run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.png"
+
+[autoload]
+
+GameState="*res://game_state.gd"
 
 [display]
 
