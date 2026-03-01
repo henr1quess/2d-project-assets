@@ -20,7 +20,7 @@ const HEALTH_BONUS_PER_LEVEL: float = 0.1
 const REVIVE_COST: int = 500
 
 # ── Caminho do save ──
-const SAVE_PATH: String = "user://save_data.json"
+const SAVE_PATH: String = "user://save_data.tres"
 
 
 func _ready() -> void:
@@ -97,38 +97,24 @@ func get_max_health(base_health: float) -> float:
 # ── Save / Load ──
 
 func save_game() -> void:
-	var data := {
-		"coins": coins,
-		"upgrade_damage_level": upgrade_damage_level,
-		"upgrade_health_level": upgrade_health_level,
-		"revive_owned": revive_owned,
-	}
-	var json_string := JSON.stringify(data)
-	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	if file:
-		file.store_string(json_string)
-		file.close()
+	var data := SaveData.new()
+	data.coins = coins
+	data.upgrade_damage_level = upgrade_damage_level
+	data.upgrade_health_level = upgrade_health_level
+	data.revive_owned = revive_owned
+	ResourceSaver.save(data, SAVE_PATH)
 
 
 func load_game() -> void:
-	if not FileAccess.file_exists(SAVE_PATH):
+	if not ResourceLoader.exists(SAVE_PATH):
 		return
-	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
-	if not file:
+	var data: SaveData = ResourceLoader.load(SAVE_PATH)
+	if not data:
 		return
-	var json_string := file.get_as_text()
-	file.close()
-
-	var json := JSON.new()
-	var error := json.parse(json_string)
-	if error != OK:
-		return
-
-	var data: Dictionary = json.data
-	coins = data.get("coins", 0)
-	upgrade_damage_level = data.get("upgrade_damage_level", 0)
-	upgrade_health_level = data.get("upgrade_health_level", 0)
-	revive_owned = data.get("revive_owned", false)
+	coins = data.coins
+	upgrade_damage_level = data.upgrade_damage_level
+	upgrade_health_level = data.upgrade_health_level
+	revive_owned = data.revive_owned
 
 
 # ── Adicionar moedas ──
