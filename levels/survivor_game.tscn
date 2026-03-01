@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bvp0oy6d34s7n"]
 
-[ext_resource type="PackedScene" uid="uid://dn2vpasminfij" path="res://canvas_layer.tscn" id="1_5mrb7"]
-[ext_resource type="Script" uid="uid://oj7hj4kgw31t" path="res://survivor_game.gd" id="1_i54c3"]
-[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_wkcnj"]
-[ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_8id3q"]
+[ext_resource type="PackedScene" uid="uid://dn2vpasminfij" path="res://ui/canvas_layer.tscn" id="1_5mrb7"]
+[ext_resource type="Script" uid="uid://oj7hj4kgw31t" path="res://levels/survivor_game.gd" id="1_i54c3"]
+[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player/player.tscn" id="1_wkcnj"]
+[ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://levels/decorations/pine_tree.tscn" id="2_8id3q"]
 
 [sub_resource type="Curve2D" id="Curve2D_d0dif"]
 _data = {

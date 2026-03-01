@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c1sx7bic4uhdj"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player/player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://weapons/gun.tscn" id="3_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 30.0

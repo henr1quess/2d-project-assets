@@ -12,7 +12,7 @@ func _ready() -> void:
 			body.take_damage(REVIVE_DAMAGE)
 
 	# Efeito visual (reutiliza o smoke_explosion)
-	const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
+	const SMOKE_SCENE = preload("res://effects/smoke_explosion/smoke_explosion.tscn")
 	var smoke = SMOKE_SCENE.instantiate()
 	smoke.global_position = global_position
 	get_parent().add_child(smoke)

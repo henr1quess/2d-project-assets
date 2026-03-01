@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const COIN_SCENE = preload("res://coin_pickup.tscn")
+const COIN_SCENE = preload("res://pickups/coin_pickup.tscn")
 
 var health = 3
 
@@ -28,7 +28,7 @@ func _die() -> void:
 	get_parent().add_child(coin)
 
 	# Efeito de morte
-	const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
+	const SMOKE_SCENE = preload("res://effects/smoke_explosion/smoke_explosion.tscn")
 	var smoke = SMOKE_SCENE.instantiate()
 	smoke.global_position = global_position
 	get_parent().add_child(smoke)

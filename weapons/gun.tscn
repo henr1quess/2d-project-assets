@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://du5i8r7jdycua"]
 
-[ext_resource type="Script" uid="uid://bpyfw0mh6bsnv" path="res://gun.gd" id="1_dk5gl"]
-[ext_resource type="Texture2D" uid="uid://coon1w77o334i" path="res://pistol/pistol.png" id="1_vk1bi"]
+[ext_resource type="Script" uid="uid://bpyfw0mh6bsnv" path="res://weapons/gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://coon1w77o334i" path="res://weapons/pistol/pistol.png" id="1_vk1bi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 478.3388

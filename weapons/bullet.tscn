@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5ixw66oaedki"]
 
-[ext_resource type="Texture2D" uid="uid://bd4rrqj72amnx" path="res://pistol/projectile.png" id="1_v7oki"]
-[ext_resource type="Script" uid="uid://cfjvwhypwf5h5" path="res://bullet.gd" id="1_v8qja"]
+[ext_resource type="Texture2D" uid="uid://bd4rrqj72amnx" path="res://weapons/pistol/projectile.png" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://cfjvwhypwf5h5" path="res://weapons/bullet.gd" id="1_v8qja"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
 radius = 15.0

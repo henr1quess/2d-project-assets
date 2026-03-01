@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr2n07heunk3a"]
 
-[ext_resource type="Script" uid="uid://bprihm81tk40f" path="res://coin_pickup.gd" id="1_coin"]
-[ext_resource type="Texture2D" uid="uid://bllqcqek8t8y3" path="res://coin/coin.png" id="2_f4i30"]
+[ext_resource type="Script" uid="uid://bprihm81tk40f" path="res://pickups/coin_pickup.gd" id="1_coin"]
+[ext_resource type="Texture2D" uid="uid://bllqcqek8t8y3" path="res://pickups/coin.png" id="2_f4i30"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_gfo33"]
 

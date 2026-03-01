@@ -15,7 +15,7 @@ var bonus_damage: int = 0
 var revive_used_this_run: bool = false
 var is_invincible: bool = false
 
-const EXPLOSION_SCENE = preload("res://revive_explosion.tscn")
+const EXPLOSION_SCENE = preload("res://effects/revive_explosion/revive_explosion.tscn")
 
 
 func _ready() -> void:

@@ -1,7 +1,7 @@
 extends Node2D
 
-const MOB_SCENE: PackedScene = preload("res://mob.tscn")
-const GAME_OVER_SCENE: PackedScene = preload("res://game_over.tscn")
+const MOB_SCENE: PackedScene = preload("res://mobs/mob.tscn")
+const GAME_OVER_SCENE: PackedScene = preload("res://ui/game_over.tscn")
 
 @export var mobs_per_tick: int = 1
 
